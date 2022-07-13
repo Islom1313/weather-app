@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'monserrat', sans-serif;
+    background-image: url(./london.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+.app-wrap {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.6));
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+}
+
+header input {
+    border-radius: 16px 0px 16px 0px;
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255, 0.6);
+    color: #666;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+    border-bottom: 3px solid #df8e00;
+}
+
+header input:focus {
+    background-color: rgb(255, 255, 255, 0.8);
+    border-radius: 0px 16px 0px 16px;
+}
+
+main {
+    margin-top: 20vh;
+    padding: 25px 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.location .city {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.location .date {
+    color: #fff;
+    font-size: 16px;
+}
+
+.main-temperature .temp {
+    color: #fff;
+    font-size: 100px;
+    font-weight: 900;
+    margin: 30px 0;
+    text-shadow: 2px 10px rgb(0, 0, 0, 0.6);
+}
+
+.main-temperature .span {
+    font-weight: 500;
+}
+
+.main-temperature .weather {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-shadow: 0px 0.4 rgb(0, 0, 0, 0.6);
+    ;
+}
+
+.main-temperature .high-low {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 0px 0.4 rgb(0, 0, 0, 0.4);
+}
+
+@media(max-width: 768px) {
+    .app-wrap {
+        grid-template-columns: 100%;
+    }
+    main {
+        margin-top: -20px;
+    }
+    header {
+        margin-top: -100px;
+    }
+}
